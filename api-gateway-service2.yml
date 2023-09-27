@@ -8,6 +8,10 @@ spring:
           uri: lb://PROFILE-SERVICE
           predicates:
             - Path=/profile/**
+        - id: EDUCATION-SERVICE
+          uri: lb://EDUCATION-SERVICE
+          predicates:
+            - Path=/education/**
 server:
    port: 9192
    error:
