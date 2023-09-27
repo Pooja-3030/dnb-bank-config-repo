@@ -1,6 +1,6 @@
 spring:
   application:
-      name: api-gateway-service
+      name: api-gateway-service2
   cloud:
     gateway:
       routes:
