@@ -7,7 +7,7 @@ spring:
         - id: EDUCATION-SERVICE
           uri: lb://EDUCATION-SERVICE
           predicates:
-            - Path=/educatiob/**
+            - Path=/education/**
         - id: PROFILE-SERVICE
           uri: lb://PROFILE-SERVICE
           predicates:
