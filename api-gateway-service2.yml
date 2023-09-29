@@ -4,32 +4,16 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: ACCOUNT-SERVICE
-          uri: lb://ACCOUNT-SERVICE
+        - id: EDUCATION-SERVICE
+          uri: lb://EDUCATION-SERVICE
           predicates:
-            - Path=/account/**
-        - id: CUSTOMER-SERVICE
-          uri: lb://CUSTOMER-SERVICE
-          predicates:
-            - Path=/customer/** 
-        - id: AUTH-SERVICE
-          uri: lb://AUTH-SERVICE
-          predicates:
-            - Path=/auth/** 
-        - id: USER-SERVICE
-          uri: lb://USER-SERVICE
-          predicates:
-            - Path=/user/**
+            - Path=/educatiob/**
         - id: PROFILE-SERVICE
           uri: lb://PROFILE-SERVICE
           predicates:
             - Path=/profile/**       
-jwt:
-  secret: mySecretKey
-  expireMs: 120000
-  refrEshexpireMs: 120000
 server:
-   port: 9191
+   port: 9192
    error:
     include-message: always
 eureka:
@@ -37,7 +21,7 @@ eureka:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} 
   client:
       serviceUrl:
-        defaultZone: http://localhost:8761/eureka/ 
+        defaultZone: http://localhost:8762/eureka/ 
 management:
   endpoints:
     web:
