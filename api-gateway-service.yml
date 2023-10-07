@@ -7,7 +7,11 @@ spring:
         - id: ACCOUNT-SERVICE
           uri: lb://ACCOUNT-SERVICE
           predicates:
-            - Path=api/account/**
+            - Path=/api/account/**
+        - id: AUTH-SERVICE
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/api/auth/**
 server:
    port: 9193
    error:
