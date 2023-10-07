@@ -12,6 +12,10 @@ spring:
           uri: lb://AUTH-SERVICE
           predicates:
             - Path=/api/auth/**
+        - id: CREDIT-SERVICE
+          uri: lb://CREDIT-SERVICE
+          predicates:
+            - Path=/api/credit/**
 server:
    port: 9193
    error:
