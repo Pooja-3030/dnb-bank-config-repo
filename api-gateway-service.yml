@@ -4,14 +4,10 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: EDUCATION-SERVICE
-          uri: lb://EDUCATION-SERVICE
+        - id: ACCOUNT-SERVICE
+          uri: lb://ACCOUNT-SERVICE
           predicates:
-            - Path=/education/**
-        - id: PROFILE-SERVICE
-          uri: lb://PROFILE-SERVICE
-          predicates:
-            - Path=/profile/**       
+            - Path=api/account/**
 server:
    port: 9193
    error:
