@@ -29,4 +29,4 @@ management:
       exposure:
         include: "*"
 api:
-  auth: http://AUTH-SERVICE/api/auth
+  auth: http://AUTH-SERVICE/api/auth/user
