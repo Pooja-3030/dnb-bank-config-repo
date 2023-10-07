@@ -27,3 +27,7 @@ management:
     web:
       exposure:
         include: "*"
+jwt:
+  secret: mySecretKey
+  expireMs: 12000000
+  refrEshexpireMs: 12000000
